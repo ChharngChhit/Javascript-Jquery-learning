@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<style>
+    .like{
+        font-size: 50px;
+        font-weight: bold;
+        margin: 20px;
+        color: black;
+        cursor: pointer;
+        display: inline;
+    }
+</style>
+<body>
+    <div class="like" data-num1="1">
+        <i class="fa-solid fa-thumbs-up"></i>
+    </div>
+    <div class="like" data-num1="1">
+        <i class="fa-solid fa-thumbs-up"></i>
+    </div>
+    <div class="like" data-num1="1">
+        <i class="fa-solid fa-thumbs-up"></i>
+    </div>
+    <div class="like" data-num1="1">
+        <i class="fa-solid fa-thumbs-up" ></i>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.like').click(function(){
+            var ethis = $(this);
+            var ss = ethis.data("num1");
+            if(ss== 0){
+                $(this).css({'color':'black'});
+                ethis.data("num1", "1");
+            }
+            else{
+                $(this).css({'color':'blue'});
+                ethis.data("num1", "0");
+            }
+        });
+    });
+</script>
+</html>

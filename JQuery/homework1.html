@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ Homework1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<style>
+    .ho_menu {
+        width: 50%;
+        background-color: aqua;
+        margin: auto;
+    }
+    .ho_menu i{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .menu {
+        width: 100%;
+        /* background-color: aqua; */
+        overflow: hidden;
+        /* margin: auto; */
+    }
+    .menu ul{
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        /* margin-left: 30px; */
+        background-color: rgb(43, 153, 226);
+        
+    }
+    .menu ul li{
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    .menu ul li a{
+        display: block;
+        text-decoration: none;
+        padding: 20px;
+        color: beige;
+    }
+    .menu ul li a:hover {
+        background-color: rgb(255, 0, 76);
+        color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+    <div class="ho_menu">
+        <i class="fa fa-align-justify" aria-hidden="true" id="btn"></i>
+    
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Information</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+    </div>    
+</body>
+<script>
+    $(document).ready(function(){
+        $('#menu').hide();
+        $('#btn').click(function(){
+            $('#menu').toggle(1000);
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu{
+        width: 80%;
+        margin: auto;
+        background-color: tomato;
+        overflow: hidden;
+    }
+    .menu ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li{
+        float: left;
+    }
+    .menu ul li:hover .s-menu{
+        display: block;
+    }
+    .menu ul li a{
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: wheat;
+    }
+    .menu ul li a:hover{
+        background-color: blue;
+    }
+    .s-menu {
+        width: 80px;
+        background-color: green;
+        position: absolute;
+        display: none;
+    }
+    .s-menu ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .s-menu ul li a{
+        display: block;
+        padding: 20px;
+        /* background-color: aliceblue; */
+        text-decoration: none;
+        color: black;
+    }
+    .s-menu ul li a:hover{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <h1 id="demo"></h1>
+    <input type="button" id="btn" value="Click">
+
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="">red</a>
+                <div class="s-menu" id="sub-menu">
+                    <ul>
+                        <li><a href="">Orange</a></li>
+                        <li><a href="">Apple</a></li>
+                        <li><a href="">Orange</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">Blue</a>
+            </li>
+            <li>
+                <a href="">Green</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var menulist=[
+        {"menu":"HTML", "sub-menu":["red","blue","green", "yellow"]},
+        {"menu":"CSS", "sub-menu":["CSS1", "CSS2", "CSS3", "CSS4"]},
+        {"menu":"C++", "sub-menu":["C++1", "C++2", "C++3", "C++4"]}
+    ];
+    document.getElementById('btn').addEventListener("click", function(){
+        var txt="";
+        for(var i in menulist){
+            // alert(menulist[i]['sub-menu'])
+            var submenu = menulist[i]['sub-menu'];
+            var item="";
+            // document.getElementById('demo').innerHTML = submenu;
+            for(var x in submenu){
+                item += `
+                    <li>
+                        <a href="">${submenu[x]}</a>
+                    </li>
+                `;
+            }
+            txt += `
+                <li>
+                    <a href="">${menulist[i]['menu']}</a>
+                    <div class="s-menu" id="sub-menu">
+                        <ul>
+                            ${item}
+                        </ul>
+                    </div>
+                </li>
+            `;
+        }
+        document.getElementById('demo').innerHTML = "<ul>" + txt +"</ul>";
+    })
+</script>
+</html>

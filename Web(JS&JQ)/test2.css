@@ -1,0 +1,46 @@
+.menu {
+  width: 80%;
+  background-color: aqua;
+  overflow: hidden;
+}
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.menu ul li:hover .submenu {
+  display: block;
+}
+.menu ul li {
+  float: left;
+  overflow: hidden;
+}
+.menu ul li a {
+  display: block;
+  background-color: blueviolet;
+  padding: 20px;
+  text-decoration: none;
+}
+.menu ul li a:hover {
+  background-color: burlywood;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+}
+.submenu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.submenu ul li {
+  display: block;
+}
+.submenu ul li a {
+  display: block;
+  padding: 20px;
+}/*# sourceMappingURL=test2.css.map */

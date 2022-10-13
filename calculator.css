@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Koulen', cursive;
+    --text-color: rgb(117, 56, 32);
+    font-size: 30px;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: lavender;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+fieldset{
+    width: 400px;
+    padding: .5rem;
+    border-radius: 3px;
+    border: 2px solid aqua;
+    box-shadow: 0 0 20px rgb(238, 255, 0), inset 0 0 20px rgb(68, 0, 255);
+    border-radius: 30px;
+}
+fieldset p {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+    text-shadow: 0 0 10px darkorange;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+fieldset #result {
+    width: 90%;
+    height: 80px;
+    margin: 5%;
+    box-shadow: 0 0 20px gray, inset 0 0 20px gray;
+    text-align: right;
+
+}
+fieldset input{
+    width: 20%;
+    margin: 1.5%;
+    box-shadow: inset 0 0 20px gray;
+    border-radius: 20px;
+}
+fieldset input:hover {
+    transform: scale(90%, 90%);
+}
+fieldset #pro, #plus, #nag, #div{
+    background-color: greenyellow;
+}
+fieldset #_equ, #_c {
+    background-color: aqua;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 400px;
+        height: 200px;
+        background-color: gainsboro;
+    }
+    .container h1{
+        text-align: center;
+        
+    }
+    #input{
+        width: 80%;
+        float: left;
+    }
+    #input label{
+        margin-top: 20px;
+        width: 80px;
+        height: 30px;
+        float: left;  
+    }
+    #input input{
+        width: 200px;
+        height: 30px;
+        margin: 10px;
+        font-size: 15px;
+        float: left;
+    }
+    #operator{
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+    #operator input{
+        width: 50px;
+        height: 30px;
+        margin-top: 5px;
+        font-size: 20px;
+        background-color: aqua;
+        border: none;
+    }
+    #operator input:hover{
+        transform: scale(90%, 90%);
+        background-color: antiquewhite;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Operator</h1>
+        <div id="input">
+            <label for="">A :</label>
+            <input type="text" id="txt1">
+            <label for="">B :</label>
+            <input type="text" id="txt2">
+            <label for="">Result :</label>
+            <input type="text" id="result">
+        </div>
+        <div id="operator">
+            <input type="button" value="+">
+            <input type="button" value="-">
+            <input type="button" value="x">
+            <input type="button" value="/">
+        </div>
+    </div>
+</body>
+</html>

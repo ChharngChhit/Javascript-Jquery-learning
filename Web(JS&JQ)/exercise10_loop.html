@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu{
+        width: 80%;
+        margin: auto;
+        background-color: tomato;
+        overflow: hidden;
+    }
+    .menu ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li{
+        float: left;
+    }
+    .menu ul li:hover .s-menu{
+        display: block;
+    }
+    .menu ul li a{
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: wheat;
+    }
+    .menu ul li a:hover{
+        background-color: blue;
+    }
+    .s-menu {
+        width: 80px;
+        background-color: green;
+        position: absolute;
+        display: none;
+    }
+    .s-menu ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .s-menu ul li a{
+        display: block;
+        padding: 20px;
+        /* background-color: aliceblue; */
+        text-decoration: none;
+        color: black;
+    }
+    .s-menu ul li a:hover{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div class="menu" id="menu">
+        <!-- <ul>
+            <li>
+                <a href="">red</a>
+                <div class="s-menu" id="sub-menu">
+                    <ul>
+                        <li><a href="">Orange</a></li>
+                        <li><a href="">Apple</a></li>
+                        <li><a href="">Orange</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="">Blue</a>
+            </li>
+            <li>
+                <a href="">Green</a>
+            </li>
+        </ul> -->
+    </div>
+
+    <h1 id="demo"></h1>
+    <input type="text" id="txt1">
+    <input type="button" id="btn" value="Click">
+</body>
+<script>
+    let menu = ['HTML', 'CSS'];
+
+    getmenu();
+    function getmenu(){
+        let txt = document.getElementById('txt1');
+        var menulist = '';
+        for(let i in menu){
+            menulist += `
+            <li>
+                <a href="">${menu[i]}</a>
+            </li>
+            `;}
+        document.getElementById('menu').innerHTML ="<ul>"+ menulist + "</ul>";
+    }
+    document.getElementById('btn').addEventListener("click", function(){
+        let txt = document.getElementById('txt1');
+        menu.push(txt1.value);
+    
+        txt1.value = '';
+        var menulist = '';
+        for(let i in menu){
+            menulist += `
+            <li>
+                <a href="">${menu[i]}</a>
+            </li>
+            `;}
+        document.getElementById('menu').innerHTML ="<ul>"+ menulist + "</ul>";
+    })
+</script>
+</html>

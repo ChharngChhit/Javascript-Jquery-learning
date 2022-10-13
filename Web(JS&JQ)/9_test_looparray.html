@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 70%;
+        /* height: 500px; */
+        margin: auto;
+        background-color: red;
+    }
+    .box {
+        width: 23%;
+        height: 300px;
+        background-color: yellow;
+        float: left;
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    .box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .price {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        color: aliceblue;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        margin-top: 20px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    span {
+        float: left;
+        margin-left: 3px;
+        font-size: 12px;
+        text-decoration: line-through;
+    }
+</style>
+<body>
+    <div class="container" id="box">
+
+    </div>
+</body>
+<script>
+    var item = [
+        {"img": "/image/shirt1.webp", "price":"50$", "dis":"10%"},
+        {"img": "/image/shirt2.webp", "price":"10$", "dis":"15%"},
+        {"img": "/image/shirt1.webp", "price":"50$", "dis":"10%"},
+        {"img": "/image/shirt2.webp", "price":"10$", "dis":"20%"},
+        {"img": "/image/shirt4.webp", "price":"30$", "dis":"5%"},
+        {"img": "/image/shirt2.webp", "price":"10$", "dis":"10%"},
+        {"img": "/image/shirt1.webp", "price":"50$", "dis":"5%"},
+        {"img": "/image/shirt2.webp", "price":"10$", "dis":"10%"}
+    ];
+    get_item();
+    function get_item(){
+        var txt="";
+        for(var i=0; i<item.length; i++){
+            txt+= `
+                <div class="box">
+                    <div class="price">
+                        ${item[i]["price"]}
+                        <span>
+                            ${item[i]['dis']}
+                        </span>
+                    </div>
+                    <img src="${item[i]['img']}" alt="">
+                </div>
+            `;
+        }
+        document.getElementById('box').innerHTML = txt;
+    }
+</script>
+</html>

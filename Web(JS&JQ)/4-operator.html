@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js varaible</title>
+</head>
+<style>
+    input{
+        width: 50px;
+    }
+
+</style>
+<body>
+    <h1 id="demo">1</h1>
+    <label for="">A</label>
+    <input type="text" value="1" id="txt1" onkeyup="sum()">
+    <label for="">B</label>
+    <input type="text" value="2" id="txt2" onkeyup="sum()">
+    <label for="">Total</label>
+    <input type="text" value="0" id="txt3" onkeyup="sum()">
+    <input type="button" value="Click" onclick="sum()" >
+    <br><br>
+</body>
+<script>
+    var aa = 200;
+    function test(){
+        var b="10";
+        document.getElementById('demo').innerHTML = aa + parseInt(b);
+        // parseInt() use for convert string to interger
+        // if we use operator (-), (*), (/) the result will correct
+    }
+    function sum(){
+        var total = document.getElementById('txt3'); 
+        var a = document.getElementById('txt1');
+        var b = document.getElementById('txt2');
+
+        total.value = parseInt(a.value)+ parseInt(b.value);
+      
+    }
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .menu {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+      background-color: aqua;
+    }
+
+    .menu ul li {
+      list-style-type: none;
+      float: left;
+    }
+
+    .menu ul li a {
+      display: block;
+      text-decoration: none;
+      padding: 10px;
+    }
+    .menu ul li a:hover {
+      background-color: blueviolet;
+    }
+  </style>
+  <body>
+    <div class="menu" id="box">
+      <!-- <ul>
+            <li><a href="">កីឡា</a></li>
+            <li><a href="">សង្គម</a></li>
+            <li><a href="">កីឡា</a></li>
+            <li><a href="">សង្គម</a></li>
+        </ul> -->
+    </div>
+    <input type="button" value="Click" id="btn" />
+  </body>
+  <script>
+    var menu = ["HTML", "CSS", "Javascript", "PHP", "Java", "JQuery"];
+    var link = [
+      "https://en.wikipedia.org/wiki/HTML",
+      "https://en.wikipedia.org/wiki/CSS",
+      "https://commons.wikimedia.org/wiki/File:Unofficial_JavaScript_logo_2.svg",
+      "https://en.wikipedia.org/wiki/PHP",
+      "",
+      "",
+    ];
+    document.getElementById("btn").addEventListener("click", function () {
+      var txt = "";
+      for (var i = 0; i < menu.length; i++) {
+        txt = txt + "<li><a href='" + link[i] + "'>" + menu[i] + "</a></li>";
+      }
+      document.getElementById("box").innerHTML = "<ul>" + txt + "</ul>";
+    });
+  </script>
+</html>

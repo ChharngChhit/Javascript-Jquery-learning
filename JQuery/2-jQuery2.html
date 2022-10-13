@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<style>
+    img{
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+    }
+</style>
+<body>
+    <img src="/image/1.png" alt="" id="image">
+    <!-- <h1 id="demo"></h1> -->
+    <!-- <input type="text" id="txt"> -->
+    <input type="button" id="btn" value="Click">
+    <input type="button" id="btn1" value="Click1">
+</body>
+<script>
+    $(document).ready(function(){
+        // $('#btn').click(function(){
+        //     $('#demo').html("<h1>Hello world!</h1>");
+        // });
+
+        // $('#btn1').click(function(){
+        //     $('#demo').text("<h1>Hello world!</h1>");
+        // });
+
+        // $('#btn').click(function(){
+        //     $('#txt').val("Welcome");
+        // });
+
+        // var txt = $('#txt');
+        // $('#btn').click(function(){
+        //     $('#demo').html(txt.val());
+        // })
+
+        // $('#btn').click(function(){
+        //     $('#demo').css({
+        //         "width":"200px",
+        //         "height":"200px",
+        //         "background-color":"red"
+        //     });
+        // });
+
+        $('#image').mouseover(function(){
+            $('#image').attr("src","/image/2.png");
+        });
+        $('#image').mouseout(function(){
+            $('#image').attr("src","/image/1.png");
+        });
+    });
+
+    // document.getElementById('btn').addEventListener("click", function(){
+    //         document.getElementById('demo').innerHTML = "Hello";
+    //     });
+</script>
+</html>

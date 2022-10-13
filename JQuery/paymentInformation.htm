@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(21, 157, 175); /* For browsers that do not support gradients */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        width: 1000px;
+        height: 500px;
+        padding: 20px;
+        background-image: linear-gradient(to bottom left, rgb(49, 39, 39), rgb(185, 185, 174));
+        /* justify-content: space-around; */
+        gap: 10px;
+    }
+    .container .content{
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 40px;
+        width: 100%;
+    }
+    .card-contant{
+        width: 100%;
+        display: flex;
+    }
+    .card-contant .card{
+        /* width: 90%; */
+        width: 450px;
+        height: 250px;
+        background-color: blue;
+        border-radius: 20px;
+        background-image: linear-gradient(#519cdd, #0c2ce0);
+        box-sizing: border-box;
+        margin: 25px;
+    }
+    .card-contant .card > img {
+        position: relative;
+        left: 290px;
+        top: 20px;
+    }
+    .card-contant .card >div{
+        position: relative;
+        top: 40px;
+        left: 30px;
+        color: white;
+    }
+    .card-contant .card >div span{
+        font-size: 25px;
+    }
+    .card-contant .card > div p{
+        font-size: 20px;
+    }
+    .card-contant .card > div #card-num{
+        font-size: 40px;
+
+    }
+    label, span{
+        color: rgb(223, 212, 197);
+    }
+    .info {
+        width: 450px;
+        /* background-color: aqua; */
+        margin: 25px;
+    }
+    .info label, .info input{
+        width: 100%;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .info input{
+        font-size: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="content">Payment Information</div>
+        <div class="card-contant">
+            <div class="card">
+                <img src="img/visa.png" alt="">
+                <div>
+                    <div>
+                        <label for="">card number</label>
+                        <p id="card-num">0000 0000 0000 0000</p>
+                    </div>
+                    <div>
+                        <div style="float: left; margin-top: 25px;">
+                            <label for="">cardholder name</label>
+                            <p id="card-name">BYTE WEBSTER</p>
+                        </div>
+                        <div style="float: left; margin-top: 25px; margin-left: 100px;">
+                            <label for="">expiration</label><br>
+                            <span id="card-date">12/24</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <label for="">Name</label>
+                <input type="text" id="txt-name" placeholder="Byte webster">
+                <label for="" >Card Number</label>
+                <input type="text" id="txt-num" placeholder="0000 0000 0000 0000">
+                <div>
+                    <label for="">Expiration</label>
+                    <input type="text" id="txt-ex" placeholder="12/24">
+
+                    <label for="">Security Code</label>
+                    <input type="number" placeholder="123">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+    $(document).ready(function(){
+        let name = $('#txt-name');
+        let num = $('#txt-num');
+        let ex = $('#txt-ex');
+        
+        name.keyup(function(){
+            $('#card-name').html(name.val());
+        });
+        num.keyup(function(){
+            $('#card-num').html(num.val());
+        });
+        ex.keyup(function(){
+            $('#card-date').html(ex.val());
+        });
+    });
+
+</script>
+</html>

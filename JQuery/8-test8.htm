@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .left-box {
+        width: 300px;
+        height: 100vh;
+        background-color: blue;
+        position: absolute;
+        left: -300px;
+        transition: 0.5s;
+    }
+    .btn-close{
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-family: sans-serif;
+        cursor: pointer;
+
+    }
+</style>
+<body>
+    <div class="btn-close" data-btn="1">
+        Show
+    </div>
+    <div class="left-box">
+
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        
+        $('.btn-close').click(function(){
+            $('.left-box').css({"left":"0"});
+            $(this).text("Close");
+        //     let ethis = $(".btn-close");
+        //     let n = ethis.data(btn);
+        //     if(n == 0){
+        //         $('.left-box').css({"left":"0"});
+        //         $(this).text("Close");
+        //         n = 0;
+        //     }else{
+        //         $('.left-box').css({"left":"0"});
+        //         $(this).text("Close");
+        //         n = 1;
+        //     }
+        });
+    });
+</script>
+</html>

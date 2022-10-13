@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 1</title>
+  </head>
+  <style>
+    #contant{
+        width: 200px;
+        text-align: center;
+        border: 2px solid blue;
+        margin-top: 10px;
+    }
+  </style>
+  <body>
+    <input type="button" value="Click1" onclick="Style1()" />
+    <input type="button" value=" Click2" onclick="Style2()">
+    <input type="button" value="Hide" onclick="hide()" />
+    <input type="button" value="Show" onclick="show()" />
+
+    <div id="contant">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat quos
+        accusantium cumque quasi voluptates obcaecati eligendi eveniet dicta
+        eius voluptatum.
+      </p>
+    </div>
+  </body>
+  <script>
+    function Style1()   {
+        document.getElementById('contant').style.color="black";
+        document.getElementById('contant').style.background="none";
+    }
+    function Style2() {
+        document.getElementById('contant').style.color="white";
+        document.getElementById('contant').style.background="black";
+    }
+    function hide() {
+        document.getElementById('contant').style.display="none";
+    }
+    function show() {
+        document.getElementById('contant').style.display="block";
+    }
+  </script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #tst{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+    }
+</style>
+<body>
+    <h1 id="demo">Hello World</h1>
+    <div id="tst">Welcome</div>
+
+    <input type="button" value="Hide_box" onclick="hide()">
+    <input type="button" value="Show_box" onclick="show()">
+    <input type="button" value="Click2" onclick="test1()">
+    <input type="button" value="Click3" onclick="test2()">
+    <button onclick="test3()">I love you</button>
+
+    <input type="button" value="Style" onclick="style1()">
+</body>
+
+<script>
+    function hide(){
+        document.getElementById('tst').style.display="none";
+    }
+    function show(){
+        document.getElementById('tst').style.display="block";
+    }
+
+    function test1(){
+        document.getElementById('demo').innerHTML="Hello My Crush";
+        document.getElementById('tst').innerHTML="Web Disign";
+    }
+    // innerHTML use for change HTML content.!
+    function test2(){
+        document.getElementById('demo').innerHTML="Hello World";
+    }
+    function test3(){
+        document.getElementById('demo').innerHTML="I love you";
+    }
+    function style1(){
+        document.getElementById('demo').style.color="blue";
+        document.getElementById('demo').style.backgroundColor="gray";
+        
+    }
+</script>
+</html>

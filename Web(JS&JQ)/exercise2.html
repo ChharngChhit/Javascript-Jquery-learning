@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #container{
+        width: 300px;
+        /* background-color: pink; */
+    }
+    #show_img{
+        height: 400px;
+        width: 300px;
+        overflow: hidden;
+    }
+    #contant{
+        width: 300px;
+        /* height: 400px; */
+        object-fit: cover;
+    }
+    #contant img{
+        width: 300px;
+        border-radius: 5px;
+    }
+    #change_img .img img{
+        width: 71px;
+        float: left;
+        margin: 2px;
+        border-radius: 5px;
+    }
+    #change_img .img img:hover{
+        transform: rotate(-15deg);
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="contant">
+            <div id="show_img"><img src="/image/1.png" id="view" alt=""></div>
+            <div id="change_img">
+                <div class="img"><img src="/image/1.png" alt="" onclick="img1()"></div>
+                <div class="img"><img src="/image/2.png" alt="" onclick="img2()"></div>
+                <div class="img"><img src="/image/3.png" alt="" onclick="img3()"></div>
+                <div class="img"><img src="/image/4.png" alt="" onclick="img4()"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function img1(){
+        document.getElementById('view').setAttribute('src','/image/1.png')
+    }
+    function img2(){
+        document.getElementById('view').setAttribute('src','/image/2.png')
+    }
+    function img3(){
+        document.getElementById('view').setAttribute('src','/image/3.png')
+    }
+    function img4(){
+        document.getElementById('view').setAttribute('src','/image/4.png')
+    }
+</script>
+</html>

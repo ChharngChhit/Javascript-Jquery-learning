@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 20px;
+        float: left;
+    }
+</style>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    
+    <input type="button" value="Before" id="btn1">
+    <input type="button" value="After" id="btn2">
+</body>
+<script>
+    $(document).ready(function(){
+        $('#btn1').click(function(){
+            var box = '<div class="box" style="background-color: blue;"></div>';
+            $('body').before(box);
+        });
+        $('#btn2').click(function(){
+            var box = '<div class="box" style="background-color: yellow;"></div>';
+            $('body').after(box);
+        });
+    });
+</script>
+</html>

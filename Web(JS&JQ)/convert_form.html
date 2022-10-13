@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Koulen', cursive;
+    }
+    body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #container {
+        width: 20rem;
+        background-color: rgb(0, 255, 136);
+        display: block;
+        box-shadow: 0 0 20px rgb(46, 31, 255), inset 0 0 20px rgb(31, 83, 255);
+        border-radius: 20px;
+    }
+    #convert {
+        text-align: center;
+        color: rgb(0, 0, 0);
+        margin: .5rem;
+        font-weight: bold;
+        text-shadow: 0 0 10px rgb(255, 60, 0);
+    }
+    #container input {
+        margin: .5rem;
+        margin-left: 2rem;
+        width: 10rem;
+        padding: .5rem;
+        box-shadow: 0 0 10px blue, inset 0 0 10px burlywood;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #container label {
+        margin-right: 20px;
+        text-align: right;
+    }
+    #container button {
+        margin: 2rem;
+        margin-left: 7rem;
+        width: 4rem;
+        background-color: rgb(255, 255, 255);
+        /* border-radius: 10px; */
+        border: 1px;
+        box-shadow: 0 0 5px rgb(3, 3, 3), inset 0 0 5px rgb(0, 0, 0);
+    }
+    #container button:hover {
+        transform: scale(120%, 120%);
+    }
+</style>
+<body>
+    <div id="container">
+        <div id="convert">
+            <h1>Convert</h1>
+            <p>MB to KB / KB to MB</p>
+        </div>
+        <input type="number" id="numMB" placeholder="0">
+        <label for="MB">Megabyte</label>
+        <input type="number" id="numKB" placeholder="0">
+        <label for="KB">Kilobyte</label>
+        <button id="btn_clear">Clear</button>
+    </div>
+</body>
+<script>
+    var num1 = document.getElementById('numMB');
+    var num2 = document.getElementById('numKB');
+    function _megabyte(){
+        num2.value = parseFloat(num1.value)*1024;
+    }
+    function _kilobyte(){
+        num1.value = parseFloat(num2.value)/1024;
+    }
+    function cls(){
+        num1.value = "";
+        num2.value = "";
+    }
+    document.getElementById('numMB').addEventListener("click", _megabyte);
+    document.getElementById('numMB').addEventListener("keyup", _megabyte);
+    document.getElementById('numKB').addEventListener("keyup", _kilobyte);
+    document.getElementById('numKB').addEventListener("click", _kilobyte);
+    document.getElementById('btn_clear').addEventListener("click", cls);
+</script>
+</html>
